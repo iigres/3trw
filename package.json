@@ -1,0 +1,26 @@
+{
+  "name": "3trw",
+  "version": "1.0.0",
+  "description": "tic-tac-toe with React, Babel and Webpack",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "iigres",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.4.2",
+    "file-loader": "^4.3.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^4.1.0"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
