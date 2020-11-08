@@ -1,7 +1,14 @@
 var path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js', // входная точка - исходный файл
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: '3trw',
+            favicon: 'favicon.ico'
+        }),
+    ],
     output: {
         path: path.resolve(__dirname, './dist'),     // путь к каталогу выходных файлов - папка dist
         publicPath: '/dist/',
@@ -11,7 +18,7 @@ module.exports = {
         rules: [   //загрузчик для jsx
             {
                 test: /\.(js|jsx)$/, // определяем тип файлов
-              //test: /\.(js|mjs|jsx|ts|tsx)$/,
+                //test: /\.(js|mjs|jsx|ts|tsx)$/,
                 exclude: /(node_modules)/,  // исключаем из обработки папку node_modules
                 loader: "babel-loader",   // определяем загрузчик
                 options: {
