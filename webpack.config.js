@@ -27,7 +27,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './dist'),     // путь к каталогу выходных файлов - папка dist
         //publicPath: '/dist/',
-        filename: "bundle.js"       // название создаваемого файла
+        filename: '[name].[contenthash].js'       // название создаваемого файла имя + хеш файла
     },
     module: {
         rules: [   //загрузчик для jsx
