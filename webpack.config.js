@@ -1,6 +1,7 @@
 var path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
     entry: './src/index.js', // входная точка - исходный файл
@@ -23,11 +24,17 @@ module.exports = {
 </html>`
 
         }),
+        new webpack.HashedModuleIdsPlugin(), // в результате хэши не будут неожиданно меняться
     ],
     output: {
         path: path.resolve(__dirname, './dist'),     // путь к каталогу выходных файлов - папка dist
         //publicPath: '/dist/',
         filename: '[name].[contenthash].js'       // название создаваемого файла имя + хеш файла
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+        },
     },
     module: {
         rules: [   //загрузчик для jsx
