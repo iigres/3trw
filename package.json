@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "build1": "webpack --config webpack.config1.js"
+    "build1": "webpack --config webpack.config1.js",
+    "build2": "webpack --config webpack.config2.js"
   },
   "author": "iigres",
   "license": "ISC",
