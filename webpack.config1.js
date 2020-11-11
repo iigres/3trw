@@ -9,6 +9,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             //title: '3trw',
+            filename: '../index.html',
             favicon: './src/favicon.ico',
             minify: false,
             templateContent: `<html>
@@ -27,8 +28,8 @@ module.exports = {
         new webpack.HashedModuleIdsPlugin(), // в результате хэши не будут неожиданно меняться
     ],
     output: {
-        path: path.resolve(__dirname, './dist'),     // путь к каталогу выходных файлов - папка dist
-        //publicPath: '/dist/',
+        path: path.resolve(__dirname, 'dist', 'static'),     // путь к каталогу выходных файлов - папка dist
+        publicPath: 'static/',
         filename: '[name].[contenthash].js'       // название создаваемого файла имя + хеш файла
     },
 
