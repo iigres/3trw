@@ -4,7 +4,8 @@
   "description": "tic-tac-toe with React, Babel and Webpack",
   "private": true,
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "build1": "webpack --config webpack.config1.js"
   },
   "author": "iigres",
   "license": "ISC",
