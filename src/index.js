@@ -9,6 +9,7 @@ import img_scared_mouse from './scared_mouse.gif';
 function Square(props) {
     return (
         <button className="square" onClick={props.onClick}>
+            <img src={img_flying_dragon} style={{ objectFit: 'contain', width: '100% ', height: '100% ' }} alt="Кнопка «button»"></img>
             {props.value}
         </button>
     );
