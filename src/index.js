@@ -2,6 +2,9 @@ import 'core-js/stable';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import img_flying_dragon from './flying_dragon.gif';
+import img_dancing_crocodile from './dancing_crocodile.gif';
+import img_scared_mouse from './scared_mouse.gif';
 
 function Square(props) {
     return (
