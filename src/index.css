@@ -34,11 +34,15 @@ body {
   
   .square:focus {
     outline: none;
+    /* background: rgb(247, 241, 241); */
+    background: #ddd;
+    
   }
   
-  .kbd-navigation .square:focus {
+  /* .kbd-navigation .square:focus {
     background: #ddd;
-  }
+    
+  } */
   
   .game {
     display: flex;
