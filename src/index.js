@@ -89,7 +89,10 @@ class Game extends React.Component {
         });
     }
 
-    jumpTo(step) {
+    jumpTo(step, message) {
+        if (message == 'Go to game start') {
+            location.reload();
+        }
         this.setState({
             stepNumber: step,
             xIsNext: (step % 2) === 0
@@ -112,7 +115,7 @@ class Game extends React.Component {
                 'Go to game start';
             return (
                 <li key={move}>
-                    <button onClick={() => this.jumpTo(move)}>{desc}
+                    <button onClick={() => this.jumpTo(move, desc)}>{desc}
                     </button>
                 </li>
             );
